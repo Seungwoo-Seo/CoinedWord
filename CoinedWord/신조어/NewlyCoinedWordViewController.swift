@@ -9,7 +9,7 @@ import UIKit
 
 final class NewlyCoinedWordViewController: UIViewController {
 
-    let newlyCoinedWords: [String: String] = [
+    let newlyCoinedWordDic: [String: String] = [
         "쫌쫌따리": "아주 조금씩 하찮은 양을 모으는 모습",
         "억텐": "억지 텐션의 줄임말. 억지로 텐션을 올려서 발랄하게 행동할 때",
         "스불재": "스스로 불러온 재앙의 줄임말. 자신이 계획한 일로 자신이 고통을 받을 때 씀",
@@ -22,12 +22,11 @@ final class NewlyCoinedWordViewController: UIViewController {
         "군싹": "군침이 싹도네의 줄임말"
     ]
 
-
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchButton: UIButton!
 
     @IBOutlet weak var keywordStackView: UIStackView!
-    @IBOutlet var keywordButtons: [UIButton]!
+    @IBOutlet var keywordButtons: [AutoAddPaddingButtton]!
 
     @IBOutlet weak var newlyCoinedWordStackView: UIStackView!
     @IBOutlet weak var newlyCoinedWordHeaderView: UIView!
@@ -42,16 +41,24 @@ final class NewlyCoinedWordViewController: UIViewController {
 
     @IBAction func didTapSearchButton(_ sender: UIButton) {
         guard let text = searchBar.searchTextField.text
-        else {return}
+        else {
+            presentAlert(title: "검색어 에러")
+            return
+        }
 
         newlyCoinedWordSearch(searchText: text)
     }
 
     @IBAction func didTapKeywordButtons(_ sender: UIButton) {
-        guard let newlyCoinedWord = sender.titleLabel?.text
-        else {return}
+        guard let text = sender.titleLabel?.text
+        else {
+            presentAlert(title: "키워드 에러")
+            return
+        }
 
-        newlyCoinedWordLabel.text = newlyCoinedWords[newlyCoinedWord]
+        newlyCoinedWordSearch(searchText: text)
+
+        randomizationKeywordStackView()
     }
 
     @IBAction func dismissKeyboard(_ sender: Any) {
@@ -78,17 +85,20 @@ extension NewlyCoinedWordViewController: UITextFieldDelegate {
 private extension NewlyCoinedWordViewController {
 
     func newlyCoinedWordSearch(searchText: String) {
+        // 공백만 있어도 isEmpty 속성이 통하지 않기 때문에
+        // 공백을 제거해준다.
+        let searchText = searchText.trimmingCharacters(in: .whitespaces)
+
         // 검색어가 비었을 때
         if searchText.isEmpty {
             presentAlert(title: "검색어를 입력하세요.")
         // 검색어도 있고 신조어도 있을 때
-        } else if newlyCoinedWords.keys.contains(searchText) {
+        } else if newlyCoinedWordDic.keys.contains(searchText) {
             searchBar.searchTextField.text = nil
-            newlyCoinedWordLabel.text = newlyCoinedWords[searchText]
+            newlyCoinedWordLabel.text = newlyCoinedWordDic[searchText]
             searchBar.searchTextField.resignFirstResponder()
-        }
         // 검색어가 비어있지 않지만 없을 때
-        else {
+        } else {
             presentAlert(title: "없는 검색어입니다.")
         }
     }
@@ -206,6 +216,53 @@ private extension NewlyCoinedWordViewController {
             view: newlyCoinedWordLabel,
             width: 2
         )
+    }
+
+}
+
+// 비즈니스 로직?
+private extension NewlyCoinedWordViewController {
+
+    // keywordStackView를 랜덤으로 구성하기
+    func randomizationKeywordStackView() {
+        // 랜덤으로 가져온 신조어들
+        let randomNewlyConinedWords = getRandomNewlyConinedWords()
+        // 랜덤으로 가져온 신조어의 갯수
+        let count = randomNewlyConinedWords.count
+
+        // 랜덤으로 가져온 신조어 갯수만큼만 hidden을 false로
+        for i in (0...count-1) {
+            keywordButtons[i].isHidden = false
+            keywordButtons[i].titleLabel?.text = randomNewlyConinedWords[i]
+        }
+
+        // 이후 버튼들은 false로
+        for button in keywordButtons.suffix(from: count) {
+            button.isHidden = true
+        }
+    }
+
+    // 랜덤으로 신조어들을 가져오기
+    func getRandomNewlyConinedWords() -> [String] {
+        // 신조어 딕셔너리에서 키값만 뽑기
+        let newlyConinedWords = newlyCoinedWordDic.keys.map { $0 }
+
+        // 랜덤 신조어를 담을 Set 생성
+        // Set으로 생성한 이유는 중복을 제거하기 위해서
+        var randomNewlyConinedWords: Set<String?> = []
+
+        // 0...4 범위 설정
+        // 최대로 스택뷰에 추가할 버튼의 갯수가 5개이기 때문!
+        for _ in 0...4 {
+            randomNewlyConinedWords.insert(
+                newlyConinedWords.randomElement()
+            )
+        }
+
+        // 옵셔널 제거해주기
+        let result = randomNewlyConinedWords.compactMap { $0 }
+
+        return result
     }
 
 }

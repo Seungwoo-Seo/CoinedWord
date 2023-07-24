@@ -21,6 +21,10 @@ final class DeliveryViewController: UIViewController {
         configureSearchBar()
         configureBackgroundViews()
         configureImageViews()
+
+
+        print("hi")
+
     }
 
     func configureNavigationBar() {

@@ -244,53 +244,78 @@
                                     <action selector="didTapSearchButton:" destination="sNQ-pm-M7H" eventType="touchUpInside" id="pCe-Fd-KNN"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="lwd-jT-p0B">
-                                <rect key="frame" x="16" y="122.99999999999999" width="300" height="34.333333333333329"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRQ-X3-lDY">
+                                <rect key="frame" x="16" y="131" width="361" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mav-WB-IJ1">
-                                        <rect key="frame" x="0.0" y="0.0" width="83" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="쫌쫌따리">
-                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="didTapKeywordButtons:" destination="sNQ-pm-M7H" eventType="touchUpInside" id="GCb-gc-BP0"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CD-in-0Qu">
-                                        <rect key="frame" x="87" y="0.0" width="53.666666666666657" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="억텐">
-                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="didTapKeywordButtons:" destination="sNQ-pm-M7H" eventType="touchUpInside" id="dGx-v7-wKR"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8n-Ry-dOk">
-                                        <rect key="frame" x="144.66666666666666" y="0.0" width="68.333333333333343" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="스불재">
-                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="didTapKeywordButtons:" destination="sNQ-pm-M7H" eventType="touchUpInside" id="f2m-Ki-Aj3"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFO-1a-Xod">
-                                        <rect key="frame" x="217" y="0.0" width="83" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="좋댓구알">
-                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="didTapKeywordButtons:" destination="sNQ-pm-M7H" eventType="touchUpInside" id="NDV-c6-kt6"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lwd-jT-p0B">
+                                        <rect key="frame" x="0.0" y="0.0" width="289" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mav-WB-IJ1" customClass="AutoAddPaddingButtton" customModule="CoinedWord" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="52" height="44"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="쫌쫌따리">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapKeywordButtons:" destination="sNQ-pm-M7H" eventType="touchUpInside" id="GCb-gc-BP0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CD-in-0Qu" customClass="AutoAddPaddingButtton" customModule="CoinedWord" customModuleProvider="target">
+                                                <rect key="frame" x="68" y="0.0" width="30" height="44"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="억텐">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapKeywordButtons:" destination="sNQ-pm-M7H" eventType="touchUpInside" id="dGx-v7-wKR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8n-Ry-dOk" customClass="AutoAddPaddingButtton" customModule="CoinedWord" customModuleProvider="target">
+                                                <rect key="frame" x="114" y="0.0" width="39" height="44"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="스불재">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapKeywordButtons:" destination="sNQ-pm-M7H" eventType="touchUpInside" id="f2m-Ki-Aj3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFO-1a-Xod" customClass="AutoAddPaddingButtton" customModule="CoinedWord" customModuleProvider="target">
+                                                <rect key="frame" x="169" y="0.0" width="52" height="44"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="좋댓구알">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapKeywordButtons:" destination="sNQ-pm-M7H" eventType="touchUpInside" id="NDV-c6-kt6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Boo-cC-j8U" customClass="AutoAddPaddingButtton" customModule="CoinedWord" customModuleProvider="target">
+                                                <rect key="frame" x="237" y="0.0" width="52" height="44"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="어쩔티비">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapKeywordButtons:" destination="sNQ-pm-M7H" eventType="touchUpInside" id="RFW-Ao-n8E"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstItem="lwd-jT-p0B" firstAttribute="bottom" secondItem="3s8-jW-JB8" secondAttribute="bottom" id="2Ph-LZ-oHW"/>
+                                    <constraint firstItem="lwd-jT-p0B" firstAttribute="leading" secondItem="3s8-jW-JB8" secondAttribute="leading" id="FJS-QT-SnU"/>
+                                    <constraint firstItem="lwd-jT-p0B" firstAttribute="height" secondItem="YGB-n7-ugS" secondAttribute="height" id="avH-ax-TJv"/>
+                                    <constraint firstItem="lwd-jT-p0B" firstAttribute="top" secondItem="3s8-jW-JB8" secondAttribute="top" id="gqY-KZ-eVz"/>
+                                    <constraint firstItem="lwd-jT-p0B" firstAttribute="trailing" secondItem="3s8-jW-JB8" secondAttribute="trailing" id="lIg-cT-Cwp"/>
+                                    <constraint firstAttribute="height" constant="44" id="nTP-N0-fSa"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="3s8-jW-JB8"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="YGB-n7-ugS"/>
+                            </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="J3l-qb-pDZ">
-                                <rect key="frame" x="16" y="207.33333333333337" width="361" height="232"/>
+                                <rect key="frame" x="16" y="191" width="361" height="232"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgd-yY-Yu9">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="16"/>
@@ -309,7 +334,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYQ-7P-7IY">
-                                        <rect key="frame" x="0.0" y="215.99999999999997" width="361" height="16"/>
+                                        <rect key="frame" x="0.0" y="216" width="361" height="16"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="xUF-us-ufP"/>
@@ -323,16 +348,17 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="qPU-if-VEK" firstAttribute="top" secondItem="DME-ej-b1x" secondAttribute="top" id="1Qn-to-w9R"/>
-                            <constraint firstItem="KXI-iu-ykl" firstAttribute="height" secondItem="qPU-if-VEK" secondAttribute="height" id="5qZ-nQ-KzU"/>
                             <constraint firstItem="DME-ej-b1x" firstAttribute="trailing" secondItem="J3l-qb-pDZ" secondAttribute="trailing" constant="16" id="6IK-MB-sao"/>
                             <constraint firstItem="KXI-iu-ykl" firstAttribute="leading" secondItem="qPU-if-VEK" secondAttribute="trailing" id="70o-tA-gSp"/>
+                            <constraint firstAttribute="trailing" secondItem="cRQ-X3-lDY" secondAttribute="trailing" constant="16" id="7or-Fr-xG8"/>
                             <constraint firstItem="KXI-iu-ykl" firstAttribute="top" secondItem="DME-ej-b1x" secondAttribute="top" id="BY1-5H-RkH"/>
-                            <constraint firstItem="lwd-jT-p0B" firstAttribute="top" secondItem="qPU-if-VEK" secondAttribute="bottom" constant="8" id="Kit-ji-NDw"/>
+                            <constraint firstItem="cRQ-X3-lDY" firstAttribute="leading" secondItem="Pf4-jj-M4F" secondAttribute="leading" constant="16" id="JUv-ft-cMW"/>
+                            <constraint firstItem="KXI-iu-ykl" firstAttribute="bottom" secondItem="qPU-if-VEK" secondAttribute="bottom" id="LbH-AA-vef"/>
+                            <constraint firstItem="KXI-iu-ykl" firstAttribute="top" secondItem="qPU-if-VEK" secondAttribute="top" id="Obd-17-208"/>
+                            <constraint firstItem="J3l-qb-pDZ" firstAttribute="top" secondItem="cRQ-X3-lDY" secondAttribute="bottom" constant="16" id="Qt3-lU-S2q"/>
                             <constraint firstItem="J3l-qb-pDZ" firstAttribute="leading" secondItem="DME-ej-b1x" secondAttribute="leading" constant="16" id="TMc-q4-WcI"/>
-                            <constraint firstItem="lwd-jT-p0B" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="KXI-iu-ykl" secondAttribute="trailing" id="UU6-gd-T9V"/>
-                            <constraint firstItem="J3l-qb-pDZ" firstAttribute="top" secondItem="lwd-jT-p0B" secondAttribute="bottom" constant="50" id="W89-CL-Z3D"/>
                             <constraint firstItem="J3l-qb-pDZ" firstAttribute="centerX" secondItem="Pf4-jj-M4F" secondAttribute="centerX" id="XpZ-Ms-6gb"/>
-                            <constraint firstItem="lwd-jT-p0B" firstAttribute="leading" secondItem="qPU-if-VEK" secondAttribute="leading" id="abE-RP-ODq"/>
+                            <constraint firstItem="cRQ-X3-lDY" firstAttribute="top" secondItem="qPU-if-VEK" secondAttribute="bottom" constant="16" id="YOa-9K-EOr"/>
                             <constraint firstItem="DME-ej-b1x" firstAttribute="trailing" secondItem="KXI-iu-ykl" secondAttribute="trailing" constant="16" id="hSv-iM-dQX"/>
                             <constraint firstItem="qPU-if-VEK" firstAttribute="leading" secondItem="DME-ej-b1x" secondAttribute="leading" constant="16" id="jIf-X3-G6b"/>
                         </constraints>
@@ -348,10 +374,11 @@
                         <outlet property="newlyCoinedWordStackView" destination="J3l-qb-pDZ" id="1S1-bj-dvs"/>
                         <outlet property="searchBar" destination="qPU-if-VEK" id="1V9-iD-sEn"/>
                         <outlet property="searchButton" destination="KXI-iu-ykl" id="12a-d6-l22"/>
-                        <outletCollection property="keywordButtons" destination="Mav-WB-IJ1" collectionClass="NSMutableArray" id="Y4g-Ru-394"/>
-                        <outletCollection property="keywordButtons" destination="5CD-in-0Qu" collectionClass="NSMutableArray" id="ZVl-Yv-tPA"/>
-                        <outletCollection property="keywordButtons" destination="S8n-Ry-dOk" collectionClass="NSMutableArray" id="DbI-rM-sdi"/>
-                        <outletCollection property="keywordButtons" destination="AFO-1a-Xod" collectionClass="NSMutableArray" id="pUO-8j-TO2"/>
+                        <outletCollection property="keywordButtons" destination="Mav-WB-IJ1" collectionClass="NSMutableArray" id="IoC-5m-p4C"/>
+                        <outletCollection property="keywordButtons" destination="5CD-in-0Qu" collectionClass="NSMutableArray" id="bEr-uM-afB"/>
+                        <outletCollection property="keywordButtons" destination="S8n-Ry-dOk" collectionClass="NSMutableArray" id="wVX-Sm-XvY"/>
+                        <outletCollection property="keywordButtons" destination="AFO-1a-Xod" collectionClass="NSMutableArray" id="Fan-G1-AVd"/>
+                        <outletCollection property="keywordButtons" destination="Boo-cC-j8U" collectionClass="NSMutableArray" id="6Mw-8G-B6B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PI5-bs-bd5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -361,7 +388,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1004" y="-27"/>
+            <point key="canvasLocation" x="789" y="-37"/>
         </scene>
     </scenes>
     <resources>

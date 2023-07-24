@@ -17,6 +17,7 @@
 		5714F0CC2A6A10DC004B9EAA /* Delivery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5714F0CB2A6A10DC004B9EAA /* Delivery.storyboard */; };
 		5714F0D32A6ACAA8004B9EAA /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5714F0D22A6ACAA8004B9EAA /* DeliveryViewController.swift */; };
 		5714F0D52A6D6CBE004B9EAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5714F0D42A6D6CBE004B9EAA /* Main.storyboard */; };
+		5737AAED2A6EA69D002F678E /* AutoAddPaddingButtton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737AAEC2A6EA69D002F678E /* AutoAddPaddingButtton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5714F0CB2A6A10DC004B9EAA /* Delivery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Delivery.storyboard; sourceTree = "<group>"; };
 		5714F0D22A6ACAA8004B9EAA /* DeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
 		5714F0D42A6D6CBE004B9EAA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5737AAEC2A6EA69D002F678E /* AutoAddPaddingButtton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoAddPaddingButtton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				5714F0C02A692D4E004B9EAA /* NewlyCoinedWordViewController.swift */,
 				5714F0B22A68DB00004B9EAA /* NewlyCoinedWord.storyboard */,
+				5737AAEC2A6EA69D002F678E /* AutoAddPaddingButtton.swift */,
 			);
 			name = "신조어";
 			path = "신조어";
@@ -182,6 +185,7 @@
 				5714F0B12A68DB00004B9EAA /* AnniversaryViewController.swift in Sources */,
 				5714F0D32A6ACAA8004B9EAA /* DeliveryViewController.swift in Sources */,
 				5714F0C12A692D4E004B9EAA /* NewlyCoinedWordViewController.swift in Sources */,
+				5737AAED2A6EA69D002F678E /* AutoAddPaddingButtton.swift in Sources */,
 				5714F0AD2A68DB00004B9EAA /* AppDelegate.swift in Sources */,
 				5714F0AF2A68DB00004B9EAA /* SceneDelegate.swift in Sources */,
 			);
